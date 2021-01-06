@@ -9,7 +9,7 @@ const httpClientCovid = axios.create({
 });
 
 const httpClientCountry = axios.create({
-    baseURL: 'http://restcountries.eu/rest/v2/alpha/',
+    baseURL: 'https://restcountries.eu/rest/v2/alpha/',
     timeout: 20000,
     headers: {
         "Content-Type": "application/json",
