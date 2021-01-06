@@ -148,8 +148,8 @@
         width: 90%;
         margin: 0 auto;
 
-        .gountry-data-graph {
-            overflow-x: scroll;
+        .country-data-graph {
+            overflow-y: scroll; 
         }
     }
     .flex-row {
