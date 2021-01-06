@@ -1,0 +1,44 @@
+
+.sticky-footer {
+    .b-table {
+        >caption {
+            position: sticky;
+            bottom: 0;
+            z-index: 1;
+            @include base-dark-gray;
+        }
+    }
+}
+
+.b-table {
+    color: $base-color;
+
+    .table-data-number {
+        text-align: right;
+    }
+
+    .thead-light {
+        th, .sr-only {
+            @include base-dark-gray;        
+        }
+    }
+
+    .column-30-width {
+        width: 34%;
+    }
+
+    .column-22-width {
+        width: 22%;
+    }
+
+    &.table-hover {
+        tr {
+            &:hover {
+                @include base-dark-gray;
+            }
+        }
+    }
+}
+.b-table-sticky-header > .table.b-table > thead > tr > th {
+    top: -1px;
+}

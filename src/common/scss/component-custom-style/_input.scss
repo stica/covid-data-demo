@@ -1,0 +1,7 @@
+.form-control {
+    @include base-dark-gray; 
+    
+    &:focus {
+        @include base-dark-gray; 
+    }
+}

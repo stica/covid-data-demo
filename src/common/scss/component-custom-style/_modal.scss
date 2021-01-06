@@ -1,0 +1,10 @@
+.modal-dialog {
+
+    .modal-content {
+        @include base-dark-gray;
+    }
+
+    .close {
+        color: whitesmoke;
+    }
+}

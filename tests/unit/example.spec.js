@@ -1,12 +1,19 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import CovidDataComponent from '@/modules/covid-data/components/CovidDataComponent.vue'
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      propsData: { msg }
-    })
-    expect(wrapper.text()).toMatch(msg)
+describe('CovidDataComponent', () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallowMount(CovidDataComponent);
+  });
+  it('renders', async () => {
+    let msg = 'Show grid representation';
+    let button =wrapper.find('.component-button');
+    expect(button.text()).toBe(msg);
+
+    await button.trigger('click');
+
+    msg = 'Show table representation';
+    expect(button.text()).toBe(msg);
   })
 })
